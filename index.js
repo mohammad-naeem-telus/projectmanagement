@@ -1,11 +1,7 @@
-import app from "./app.js";
+import app from "./src/app.js";
 import connectDB from "./src/config/database.js";
 
 const port = process.env.PORT;
-
-app.get("/", (req, res) => {
-  res.json({ value: "Hello World!" });
-});
 
 connectDB()
   .then(() => {
