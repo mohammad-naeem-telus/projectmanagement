@@ -22,9 +22,11 @@ app.use(express.static("public"));
 // import routes
 import healthCheckRouter from "./routes/healthcheck.routes.js";
 import userRouter from "./routes/user.routes.js";
+import projectRouter from "./routes/project.routes.js";
 
 app.use("/api/v1/healthcheck", healthCheckRouter);
 app.use("/api/v1/users", userRouter);
+app.use("/api/v1/projects", projectRouter);
 
 app.get("/", (_req, res) => {
   res.status(200).json({ message: "API is running..." });
